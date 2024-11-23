@@ -1,0 +1,15 @@
+# Ignore bin and target folders
+/bin/
+/target/
+
+# Ignore Eclipse specific files
+.classpath
+.project
+.settings/
+
+# Ignore Maven specific files
+*.log
+
+.metadata
+
+/*/bin/
