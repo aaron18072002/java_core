@@ -1,8 +1,13 @@
 package datastructure;
 
 public class Ex03VariableScope {
+	public static final int g1 = 1_000_000;
+	private static final int g2 = 200_000;
 
 	public static void main(String[] args) {
+		System.out.printf("main g1 -> %s\n",g1);
+		System.out.printf("main g2 -> %s\n",g2);
+		
 		char a1 = 'A';
 		char a3 = test02();
 		
