@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure.primitive;
 
 public class Ex03VariableScope {
 	public static final int g1 = 1_000_000;
