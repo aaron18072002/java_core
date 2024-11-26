@@ -1,5 +1,7 @@
 package datastructure.object;
 
+import bean.Item;
+
 public class Ex01ObjectTypeDemo {
 	public static void main(String[] args) {
 		// Primitive Data Type
@@ -15,10 +17,16 @@ public class Ex01ObjectTypeDemo {
 		Item item1 = new Item();
 		item1.id = 1; // gán giá trị cho id của ô nhớ mà item1 đang trỏ đến
 		item1.name = "A";
-		System.out.printf("item1 id = %s\n", item1.id);
-		System.out.printf("item1 name = %s\n", item1.name);
-		System.out.printf("item1 sales price = %s\n", item1.salesPrice);
 		System.out.printf("item1 toString = %s\n", item1.toString());
 		// getClass().getName() + "@" + Integer.toHexString(hashCode());
+		
+		Item item2 = new Item();
+		item2.id = 2;
+		item2.name = "B";
+		item2.salesPrice = 22d;
+		System.out.printf("item2 toString = %s\n", item2.toString());
+		
+		Item item3 = new Item(3,"C",33d);
+		System.out.printf("item3 toString = %s\n", item3.toString());
 	}
 }
