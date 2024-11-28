@@ -8,7 +8,7 @@ public class Ex02TernaryOperator {
 	public static void main(String[] args) {
 		/*
 			Toán tử 3 ngôi:
-			Cách làm khách của if else else if
+			Cách làm khác của if else else if
 			Sử dụng tt3n trong 1 số trường hợp "đơn giản" để làm gọn code
 			Câu 1: Cho 2 số a, b. Tìm max của a,b
 		*/
