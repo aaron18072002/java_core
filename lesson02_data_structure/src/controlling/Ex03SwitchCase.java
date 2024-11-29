@@ -10,9 +10,14 @@ public class Ex03SwitchCase {
 			--> In ra từ tiếng anh tương ứng với số đó
 		*/
 		Random rd = new Random();
-		int numberInt = rd.nextInt(1,6);
+		int numberInt = rd.nextInt(1,10);
 		System.out.println("Số --> " + numberInt);
 		
+		/*
+		  Dừng lại khi:
+		  + gặp break
+		  + xong hết default
+		*/
 		String numberStr; 
 		switch(numberInt) {
 			case 1:
@@ -27,10 +32,32 @@ public class Ex03SwitchCase {
 			case 4:
 				numberStr = "Four";
 				break;
-			default:
+			case 5:
 				numberStr = "Five";
+				break;
+			default: //else
+				numberStr = "Unsupported ...";
 		}
 		
 		System.out.println("Tên tiếng anh --> " + numberStr);
+		
+		System.out.println("\n========================\n");
+		
+		int number = rd.nextInt(2,10);
+		switch (number) {
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+				System.out.println("Week day");
+				break;
+			case 7:
+			case 8:
+				System.out.println("Weekend day");
+				break;
+			default:
+				System.out.println("Invalid day");
+		}			
 	}
 }
