@@ -1,0 +1,24 @@
+2. Một class
+--> Tạo ra hàm main để thực thi chương trình.
+--> Đóng vai trò là KDL.
+--> Đóng vai trò là utility class chứa các hàm chức năng
+	được sử dụng ở nhiều nơi.
+	
+3. Java có 2 loại KDL
+	+ KDL nguyên thủy
+	+ KDL đối tượng
+	
+4. Cần biến lưu giá trị số nguyên, giờ lưu KDL gì vì sao?
+
+5. Ý nghĩa của từ khóa final
+	+ không thể thay đổi ở STACK
+	
+6. ++ -- prefix suffix && ||
+
+7. Scanner nhập xuất, trôi lệnh
+
+8. switch case 
+
+9. for while dowhile break continue
+
+10. array(lesson10)
