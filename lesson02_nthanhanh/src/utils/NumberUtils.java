@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class NumberUtils {
@@ -22,6 +23,17 @@ public class NumberUtils {
 		return true;
 	}
 	
+	public static int[] generateRandomNumber (int length, int minInclusive, int maxExclusive) {
+		int[] numbers = new int[length];
+		Random rd = new Random();
+		
+		for(int i = 0; i < length; i++) {
+			numbers[i] = rd.nextInt(minInclusive, maxExclusive);
+		}
+		
+		return numbers;
+	}
+	
 	public static long fact(int n) {
 		long f = n;
 		while(n > 1) {
@@ -31,7 +43,8 @@ public class NumberUtils {
 		return f;
 	}
 	
-	public static int inputNumber(int minInclusive, int maxExclusive, int maxWrongTimes, String message) {
+	public static int inputNumber(int minInclusive, 
+			int maxExclusive, int maxWrongTimes, String message) {
 		String text = null;
 		int number = 0;
 		int wrongTimes = 0;
