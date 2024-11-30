@@ -38,6 +38,8 @@ public class Ex05Symetric {
 		} else {
 			System.out.println(number + " không phải là số đối xứng");
 		}
+		
+		ip.close();
 	} 
 	
 	private static boolean isSymetricNumber(int number) {
