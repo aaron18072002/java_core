@@ -1,6 +1,8 @@
 package view;
 
 import java.util.Scanner;
+import static java.lang.Math.*; // import all static function và thuộc tính 
+								//của Math class
 
 public class Ex02Power {
 	public static void main(String[] args) {
