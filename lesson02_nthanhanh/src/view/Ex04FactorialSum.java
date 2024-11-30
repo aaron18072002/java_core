@@ -18,9 +18,10 @@ public class Ex04FactorialSum {
 				+ Arrays.toString(numbers));
 		
 		System.out.println("Tổng giai thừa = " + sumOfFactorials(numbers));
+		System.out.println("Tổng giai thừa = " + sumOfFactorials(1,2,3,4,5));
 	}
 	
-	private static long sumOfFactorials(int[] numbers) {
+	private static long sumOfFactorials(int... numbers) {
 		long sum = 0;
 		for(int number:numbers) {
 			sum = sum + fact(number);

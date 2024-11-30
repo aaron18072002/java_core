@@ -9,4 +9,14 @@ public class NumberUtils {
 		}
 		return f;
 	}
+	
+	public static boolean isPositiveNumber(String text) {
+		for(int i = 0; i < text.length(); i++) {
+			char letter = text.charAt(i);
+			if(letter <= '0' || letter > '9') {
+				return false;
+			}
+		}
+		return true;
+	}
 }
