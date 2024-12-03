@@ -10,6 +10,9 @@
 	+ Cho các thuộc tính là private
 	+ Khai báo thêm getter,setter cho các tt để thay đổi/truy cập giá trị.
 	
+Destructor(hàm hủy) được sử dụng, gọi để xóa các đối tượng không còn được 
+sử dụng, ô nhớ ở HEAP không còn được liên kết bởi ô nhớ nào trong STACK cả.
+	
 Câu hỏi 1: Vì sao lại cần getter,setter mà không public cho thuộc tính?
 	+ Nếu để public thì có thể truy cập được từ bất kỳ class nào,
 	  hoàn toàn giống FOP, ko có quản lý riêng các tt cho từng đối tượng
