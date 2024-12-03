@@ -2,16 +2,23 @@ package beans;
 
 public class CarAdv {
 	
-	private String color;
-	private String model;
+	private String color; // phạm vi đối tượng
+	
+	// ngoại lệ cho tt static là public
+	public static String model; // phạm vi class
+	
+	// this --> đối tượng hiện tại
 	
 	public CarAdv() {
 		
 	}
 
-	public CarAdv(String color, String model) {
+	public CarAdv(String color/* , String model */) {
 		this.color = color;
-		this.model = model;
+		
+		// TT static ko nên được gán giá trị tại CONSTRUCTOR
+		// Vì set luôn giá trị chung cho tất cả đối tượng
+		// this.model = model;
 	}
 
 	public String getColor() {
@@ -26,8 +33,13 @@ public class CarAdv {
 		return model;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
+	public static void setModel(String model) {
+		CarAdv.model = model;
+	}
+
+	@Override
+	public String toString() {
+		return "CarAdv [color=" + this.color + ", model=" + CarAdv.model + "]";
 	}
 
 }

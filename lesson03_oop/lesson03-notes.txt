@@ -23,6 +23,10 @@ Từ khóa static
 		--> thuộc tính đó sẽ thuộc phạm vi của class
 		--> tất cả các đối tượng được tạo ra từ class này để sử dụng chung giá
 			trị của biến static
+			+ có thể được truy cập từ đối tượng
+				--> ko khuyến khích, vì nhìn code set tt cho 1 đối tượng
+					nhưng lại ăn code cho tất cả đối tượng
+			+ có thể được truy cập từ class
 	+ Sử dụng ở hàm
 	+ Sử dụng ở class
 	
