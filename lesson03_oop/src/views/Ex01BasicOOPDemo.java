@@ -18,5 +18,8 @@ public class Ex01BasicOOPDemo {
 		System.out.println("c1 --> " + car1.toString());
 		System.out.println("c2 --> " + car2.toString());
 		System.out.println("c3 --> " + car3.toString());
+		
+		Car car4 = new Car();
+		car4.setId(44);
 	}
 }
