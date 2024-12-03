@@ -34,6 +34,7 @@ Từ khóa static
 		Khai báo hàm đó là non-static nếu hàm phụ thuộc vào đối tượng đang gọi
 		--> mỗi đối tượng khi gọi vào có thể cho KQ khác nhau
 	+ Sử dụng ở class
+		Buider Pattern
 	
 Câu hỏi 1: Vì sao lại cần getter,setter mà không public cho thuộc tính?
 	+ Nếu để public thì có thể truy cập được từ bất kỳ class nào,
