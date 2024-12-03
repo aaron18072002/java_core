@@ -4,3 +4,16 @@
 - Nhưng trong coding
 + Dự án có nhiều file code, các file gọi các hàm và thuộc tính lẫn nhau
   để xử lý (tt phải khác private).
+  
+--> Conflict với idea của OOP
+--> Xử lý
+	+ Cho các thuộc tính là private
+	+ Khai báo thêm getter,setter cho các tt để thay đổi/truy cập giá trị.
+	
+Câu hỏi 1: Vì sao lại cần getter,setter mà không public cho thuộc tính?
+	+ Nếu để public thì có thể truy cập được từ bất kỳ class nào,
+	  hoàn toàn giống FOP, ko có quản lý riêng các tt cho từng đối tượng
+	+ Nếu để public thì class ở bên ngoài có thể truy cập
+	  trực tiếp thuộc tính và thay đổi luôn CTDL(KDL) của tt, sai bài toán
+	+ Từ sau về sau khi tạo 1 class
+	  private attribute và getter setter để truy cập/thay đổi giá trị
