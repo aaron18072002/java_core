@@ -12,6 +12,19 @@
 	
 Destructor(hàm hủy) được sử dụng, gọi để xóa các đối tượng không còn được 
 sử dụng, ô nhớ ở HEAP không còn được liên kết bởi ô nhớ nào trong STACK cả.
+
+Từ khóa static
+	+ Sử dụng ở thuộc tính(1 biến toàn cục, 1 TT của KDL class)
+		Với thuộc tính non-static 
+		--> thuộc tính đó sẽ thuộc phạm vi của đối tượng
+		--> thuộc tính sẽ được quản lý riêng trên từng đối tượng, ô nhớ HEAP
+		
+		Với thuộc tính static 
+		--> thuộc tính đó sẽ thuộc phạm vi của class
+		--> tất cả các đối tượng được tạo ra từ class này để sử dụng chung giá
+			trị của biến static
+	+ Sử dụng ở hàm
+	+ Sử dụng ở class
 	
 Câu hỏi 1: Vì sao lại cần getter,setter mà không public cho thuộc tính?
 	+ Nếu để public thì có thể truy cập được từ bất kỳ class nào,

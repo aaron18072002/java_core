@@ -18,7 +18,9 @@ public class Ex02Destructor {
 		
 		// Nguyên nhân
 		// Biến trỏ đến đối tượng đó, nó trỏ đến đối tượng hay ô nhớ khác
+		// Ô nhớ cũ không được sử dụng
 		
 		// Có cách nào hạn chế tạo ra các unused objects không?
+		// Gán final cho biến KDL đối tượng
 	}
 }
