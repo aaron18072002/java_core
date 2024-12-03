@@ -1,0 +1,6 @@
+- Sử dụng private để đảm bảo hướng phát triển của OOP
++ Từng class sẽ quản lý thuộc tính riêng của nó
+
+- Nhưng trong coding
++ Dự án có nhiều file code, các file gọi các hàm và thuộc tính lẫn nhau
+  để xử lý (tt phải khác private).
