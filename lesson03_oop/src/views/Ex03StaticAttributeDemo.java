@@ -2,7 +2,7 @@ package views;
 
 import beans.CarAdv;
 
-public class Ex03StaticBasicDemo {
+public class Ex03StaticAttributeDemo {
 	public static void main(String[] args) {
 		
 		// Static ko nên được gán lúc khởi tạo đối tượng
