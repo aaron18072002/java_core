@@ -9,4 +9,8 @@ KDL cha là
 + class: khi muốn thừa kế các thuộc tính
 + interface: khi muốn tạo các hàm chung mà chưa biết phần body
 	  	   : abstract method
-+ abstract class: tương tự class nhưng có thể chứa thêm hàm chung ko có body	  	 
++ abstract class: tương tự class nhưng có thể chứa thêm hàm chung ko có body	
+
+1. Java có hỗ trợ đa thừa kế không?
+Đa thừa kế: 1 class con thừa kế từ N class cha
+==> KHÔNG  	 
