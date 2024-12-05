@@ -4,6 +4,7 @@ Tính chất đa hình có 2 loại
 + Đa hình trong phương thức
 + Đa hình trong đối tượng
 
+1. Đa hình trong phương thức
 Định nghĩa
 ----------
 Là phương thức có hình thái, thể hiện này thể hiện kia
@@ -21,3 +22,19 @@ Có 2 loại
 		VD: toString
 	Câu hỏi 1: Override thuộc tính được không
 	Câu hỏi 1: Override hàm static được không
+	
+2. Đa hình trong đối tượng
+Định nghĩa
+----------
+Là khi 1 biến KDL có thể trỏ đến chính nó hoặc KDL con
+Là một đối tượng có nhiều thể hiện
+VD: Shape --> Rectangle,Square,...
+
+Mục đích:
++ Dễ dàng ép kiểu trong phạm vi cha con, anh em lúc compile
++ Linh hoạt hơn trong
+	--> Tạo mảng: nhận danh sách các phần tử là chính nó hoặc biến 
+	KDL con của nó.
+	--> Tuyền tham số qua hàm: tham số có thể KDL chính nó hoặc KDL con.
+	
+Từ khóa instanceof
