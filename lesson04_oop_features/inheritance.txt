@@ -20,3 +20,35 @@ khai báo mà class con lại không override, khi lấy đối tượng con g�
 đó --> ko biết phải dùng từ ai	 
 
 2. Phân biệt abstract class và interface
+- Giống nhau
+	+ Đóng vai trò là 1 KDL cha
+	+ Có thể chứa hàm trừu tượng(chỉ chứa phần khai báo, ko có thân hàm)
+	+ Khi có KDL là class extends, implements từ abstract class, interface
+	hoặc tạo ra 1 đối tượng trực tiếp từ abstract class/interface
+	--> bắt buộc phải override lại các abstract methods
+	
+- Khác nhau
+	Abstract class
+	+ KDL con là class thừa kế thì dùng từ khóa extends và chỉ được phép
+	đơn thừa kế
+	+ Chứa thêm các hàm bình thường (có body)
+	+ Thuộc tính có thể là static or non-static tùy khai báo
+	+ Hàm bình thường thì có phạm vi trong package hiện tại
+	
+	Interface
+	+ KDL con là class thực thi thì dùng từ khóa implements và có thể
+	  đơn, đa thực thi
+	+ Chỉ chứa các hàm trừu tượng
+	+ Thuộc tính mặc định là "public static final"
+	
+------> 100% đúng với version JDK 1.0 đến 1.7
+
+Khái niệm: class, abstract class, interface
+- class extends class
+- class extends abstract class
+- class implements interface
+-------------
+- interface extends interface
+	--> khi có các interface có chung có hàm trừu tượng
+		tạo ra interface cha cho các interface con thừa kế
+		gộp các hàm trừu tượng từ interface cha vào interface con
