@@ -1,0 +1,12 @@
+Inheritance = Tính chất thừa kế
+
+Định nghĩa
+==========
+Khi có các KDL có chung thuộc tính &| phương thức
+--> Tạo ra các KDL cha để chứa các phần chung đó để tái sử dụng code
+
+KDL cha là
++ class: khi muốn thừa kế các thuộc tính
++ interface: khi muốn tạo các hàm chung mà chưa biết phần body
+	  	   : abstract method
++ abstract class: tương tự class nhưng có thể chứa thêm hàm chung ko có body	  	 
