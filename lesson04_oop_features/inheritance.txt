@@ -52,3 +52,7 @@ Khái niệm: class, abstract class, interface
 	--> khi có các interface có chung có hàm trừu tượng
 		tạo ra interface cha cho các interface con thừa kế
 		gộp các hàm trừu tượng từ interface cha vào interface con
+- abstract class implements interface
+	--> biến các hàm trừu tượng trong interface thành
+			 các hàm trừu tượng trong abstract class
+		ko bắt buộc override
