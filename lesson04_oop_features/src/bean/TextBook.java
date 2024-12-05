@@ -1,46 +1,30 @@
 package bean;
 
-public class TextBook {
-	private String id;
-	private String name;
-	private Double price;
+public class TextBook extends Book {
 	private Boolean isNew;
 	private Double discountInPercent;
 	
 	public TextBook() {
 		
 	}
+	
+	// this: đại diện cho đối tượng hiện tại đang gọi hàm, thuộc tính
+	//	   : gọi hàm khởi tạo của chính nó
+	
+	// super: đại diện cho đối tượng cha của
+	//        đối tượng hiện tại đang gọi hàm, thuộc tính
 
 	public TextBook(String id, String name, Double price, Boolean isNew, Double discountInPercent) {
-		this.id = id;
-		this.name = name;
-		this.price = price;
+		super(id, name, price);
 		this.isNew = isNew;
 		this.discountInPercent = discountInPercent;
 	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
+	
+	public TextBook(String id, String name, Double price) {
+//		super(id, name, price);
+//		this.isNew = true;
+//		this.discountInPercent = 0d;
+		this(id,name,price,true,0d);
 	}
 
 	public Boolean getIsNew() {
@@ -61,8 +45,9 @@ public class TextBook {
 
 	@Override
 	public String toString() {
-		return "TextBook [id=" + id + ", name=" + name + ", price=" + price + ", isNew=" + isNew
-				+ ", discountInPercent=" + discountInPercent + "]";
+		return "TextBook [id=" + super.getId() + ", name=" + super.getId() + ", price=" 
+				+ super.getPrice() + ", isNew=" + this.isNew
+				+ ", discountInPercent=" + this.discountInPercent + "]";
 	}
 	
 }
