@@ -13,4 +13,10 @@ KDL cha là
 
 1. Java có hỗ trợ đa thừa kế không?
 Đa thừa kế: 1 class con thừa kế từ N class cha
-==> KHÔNG  	 
+==> KHÔNG
+Vì: khi class con thừa kế từ class cha, không bắt buộc phải override 
+hàm từ class cha. Nếu trường hợp các class cha có chung hàm mà có chung phần
+khai báo mà class con lại không override, khi lấy đối tượng con gọi hàm chung
+đó --> ko biết phải dùng từ ai	 
+
+2. Phân biệt abstract class và interface
