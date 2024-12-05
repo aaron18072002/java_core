@@ -55,4 +55,8 @@ Khái niệm: class, abstract class, interface
 - abstract class implements interface
 	--> biến các hàm trừu tượng trong interface thành
 			 các hàm trừu tượng trong abstract class
-		ko bắt buộc override
+		ko bắt buộc phải override
+		
+----- Thay đổi của interface từ JDK8, 9 -----
+Interface bây giờ ngoài hàm trừu tượng ra thì nó có thể chứa thêm các 
+hàm bình thường (có body) bằng cách thêm từ khóa: default,static,private
