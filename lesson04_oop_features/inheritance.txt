@@ -40,6 +40,9 @@ khai báo mà class con lại không override, khi lấy đối tượng con g�
 	  đơn, đa thực thi
 	+ Chỉ chứa các hàm trừu tượng
 	+ Thuộc tính mặc định là "public static final"
+	+ Hàm trừu tượng trong interface mặc định là public abstract
+	
+	+ Từ Java8 trở đi interface có thêm hàm bình thường: static,default,private
 	
 ------> 100% đúng với version JDK 1.0 đến 1.7
 
@@ -60,3 +63,19 @@ Khái niệm: class, abstract class, interface
 ----- Thay đổi của interface từ JDK8, 9 -----
 Interface bây giờ ngoài hàm trừu tượng ra thì nó có thể chứa thêm các 
 hàm bình thường (có body) bằng cách thêm từ khóa: default,static,private
+
+Trước JDK8
++ Một interface có 1/N hàm trừu tượng đi chăng nữa thì muốn tạo 1 
+  đối tượng từ interface có 2 cách:
+  1. Tạo implementation class implements từ interface
+  	--> Override các hàm trừu tượng đó
+  	--> new imple class để tạo đối tượng
+  	--> Square implements Shape
+  2. Dùng từ khóa new trực tiếp Interface
+  	--> override các hàm trực tiếp tại lúc new
+  	--> anonymous innter type(class)
+  	
+Từ JDK8, bổ sung(cho trường hợp interface có duy nhất 1 hàm trừu tượng)
+	Ngoài 2 cách đc hỗ trợ từ version trước
+	JDK8 hỗ trợ tạo đối tượng cho interface
+	bằng anonymous function(lambda expression)
