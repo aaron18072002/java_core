@@ -39,7 +39,7 @@ public class Ex04AppLove {
 		
 		Player p2 = new Player(
 				"Lê Thị A",
-				false,
+				true,
 				"Đà Nẵng",
 				new String[] {choices[0], choices[1], choices[2], choices[7], choices[5]},
 				LocalDate.of(2008, 10, 28));
@@ -50,6 +50,7 @@ public class Ex04AppLove {
 	private static boolean isValid(Player p1, Player p2) {
 		// + Khác giới tính
 		if(p1.isGender() == p2.isGender()) {
+			System.err.println("Không được cùng giới tính");
 			return false;
 		}
 		
@@ -61,14 +62,15 @@ public class Ex04AppLove {
 			older = p1.getDateOfBirth();
 		}
 		int yearsDiff = Period.between(younger, older).getYears();
-		System.out.println("Số năm chính xác --> " + yearsDiff);
 		if(yearsDiff >= 8) {
+			System.err.println(">> Chênh nhau hơn 8 tuổi");
 			return false;
 		}
 		
 		// + Có chung >= 4 sở thích
 		String[] sameHobbies = getSameBobbies(p1, p2);
 		if(sameHobbies.length < 4) {
+			System.err.println("Yêu cầu chung ít nhất 4 sở thích");
 			return false;
 		}
 		
