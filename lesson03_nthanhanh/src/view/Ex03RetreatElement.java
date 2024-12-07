@@ -27,13 +27,47 @@ public class Ex03RetreatElement {
 		
 		int[][] matrix = enterNumbersOfMatrix(sc, 3, 3);
 		
-		printMatrix(matrix,3,3);
+		printMatrix(matrix);
 		
+		// Tìm phần tử yên ngựa
+		System.out.println("Phần tử yên ngựa là " + findRetreatElement(matrix));
 	}
 	
-	private static void printMatrix(int[][] matrix,int n,int m) {
-		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < m; j++) {
+	private static Integer findRetreatElement(int[][] matrix) {
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = 0; j < matrix[i].length; j++) {
+				int element = matrix[i][j];
+				if(isMaxCol(element, j, matrix) && isMaxRow(element, matrix[i])) {
+					return element;
+				}
+			}
+		}		
+		return null;
+	}
+	
+	private static boolean isMaxRow(int checkingElement, int[] elements) {
+		for(int i = 0; i < elements.length; i++) {
+			int element = elements[i];
+			if(element < checkingElement) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private static boolean isMaxCol(int checkingElement,int colI,int[][] matrix) {
+		for(int i = 0; i < matrix.length; i++) {
+			int element = matrix[i][colI];
+			if(element > checkingElement) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private static void printMatrix(int[][] matrix) {
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = 0; j < matrix[i].length; j++) {
 				System.out.printf("%d",matrix[i][j]);
 				System.out.print("\t");
 			}
