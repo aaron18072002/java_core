@@ -18,6 +18,8 @@ public class Ex01BasicDatetimeDemo {
 		Date date = new Date();
 		System.out.println("1. Date --> " + date);
 		
+		date = new Da
+		
 	}
 	
 }
