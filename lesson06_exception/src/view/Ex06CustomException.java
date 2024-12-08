@@ -7,7 +7,11 @@ public class Ex06CustomException {
 	public static void main(String[] args) {
 		System.out.println("validate 16 --> " + validate(16));
 		
-		System.out.println("validate 12 --> " + validate(12));
+		try {		
+			System.out.println("validate 12 --> " + validate(12));
+		} catch(InvalidAgeException ex) {
+			System.out.println(ex.getMessage());
+		}
 	}
 	
 	private static boolean validate(int age) {
