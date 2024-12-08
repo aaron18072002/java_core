@@ -9,7 +9,7 @@ public class Ex05Throws {
 		
 		// Viết chương trình tạo mới 1 file trong java
 		try {	
-			createFile("etf~~~~~~~~~~~sdfsd#@!$$#$()est.txt");
+			createFile("etest.txt");
 			System.out.println("Tạo xong rồi");
 		} catch(Exception e) {
 			
