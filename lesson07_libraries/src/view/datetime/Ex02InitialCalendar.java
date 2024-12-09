@@ -6,7 +6,6 @@ import java.util.TimeZone;
 
 public class Ex02InitialCalendar {
 	
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		// Calendar: Nhiều loại lịch (âm/dương)
 		// Tại một thời điểm tạo nhiều Calendar thì giá trị nó chỉ trả
