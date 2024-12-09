@@ -30,7 +30,9 @@ public class Ex03CalendarBasicOperation {
 		System.out.printf("Giờ phút giây: %d:%d:%d %s\n",hour,minute,second,ap);
 		
 		int daysOfMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int daysOfYear = c.getActualMaximum(Calendar.YEAR);
 		System.out.println("Số ngày trong tháng " + month + " là " + daysOfMonth);
+		System.out.println("Số ngày trong năm " + year + " là " + daysOfYear);
 		
 		// Muốn print ở định dạng này kia thì ko get ra...	
 		// Format: KDL --> String mà ko ảnh hưởng đến kết quả
@@ -44,6 +46,9 @@ public class Ex03CalendarBasicOperation {
 		c.add(Calendar.YEAR, 1);
 		formated = df.format(c.getTime());
 		System.out.println("formated after 1 year --> " + formated);
+		
+		int fdow = c.getFirstDayOfWeek();
+		System.out.println("first day of week --> " + fdow);
 	}
 	
 }
