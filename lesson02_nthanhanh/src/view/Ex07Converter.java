@@ -12,7 +12,8 @@ public class Ex07Converter {
 			N = 4 -> 100
 			N = 5 -> 101
 		*/
-		System.out.println("Cơ số 11 --> Thập phân " + convert(11));
+		System.out.println("Cơ số 123 --> Thập phân " + convert(123));
+		System.out.println("Cơ số 123 V2 --> Thập phân " + convertV2(123));
 	}
 	
 	private static String convert(int decimal) {
@@ -22,6 +23,20 @@ public class Ex07Converter {
 			binaryAsString = modPart + binaryAsString;
 			decimal = decimal/2;
 		}
+		return binaryAsString;
+	}
+	
+	private static String convertV2(int decimal) {
+		String binaryAsString = "";
+		while(true) {
+			int modPart = decimal%2;
+			binaryAsString = modPart + binaryAsString;
+			decimal /= 2;
+			if(decimal == 0) {
+				break;
+			}
+		}
+			
 		return binaryAsString;
 	}
 }
