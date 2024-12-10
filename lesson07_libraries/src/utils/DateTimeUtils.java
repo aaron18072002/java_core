@@ -12,6 +12,20 @@ public class DateTimeUtils {
 		
 	}
 	
+	public static String optional(long value, String unit) {
+		if(value == 0) {
+			return "";
+		}
+		return value + " " + unit + " ";
+	}
+	
+	public static String optionalEnd(long value, String unit) {
+		if(value == 0) {
+			return "";
+		}
+		return value + " " + unit;
+	}
+	
 	public static String toString(Date date,String pattern) {
 		DateFormat df = new SimpleDateFormat(pattern);
 		return df.format(date);
