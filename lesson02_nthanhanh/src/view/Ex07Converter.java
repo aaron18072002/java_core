@@ -12,8 +12,8 @@ public class Ex07Converter {
 			N = 4 -> 100
 			N = 5 -> 101
 		*/
-		System.out.println("Cơ số 123 --> Thập phân " + convert(123));
-		System.out.println("Cơ số 123 V2 --> Thập phân " + convertV2(123));
+		System.out.println("Cơ số 8 --> Thập phân " + convert(8));
+		System.out.println("Cơ số 8 V2 --> Thập phân " + convertV2(8));
 	}
 	
 	private static String convert(int decimal) {
