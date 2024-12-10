@@ -20,8 +20,8 @@ public class Ex03LocalTimeDuration {
 		System.out.println("Khoảng thời gian --> " + duration);
 		
 		String dtDetails = optional(duration.toHoursPart(), "giờ")
-				+ optional(duration.toMinutes(), "phút")
-				+ optional(duration.toSeconds(), "giây");
+				+ optional(duration.toMinutesPart(), "phút")
+				+ optional(duration.toSecondsPart(), "giây");
 		
 		System.out.println("Khoảng thời gian --> " + dtDetails);
 		
