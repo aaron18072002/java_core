@@ -10,23 +10,29 @@ public class Ex02SpecialNumber {
 		System.out.println(isSpecialNumber(8));
 	}
 	
+	public static boolean isSpecialNumberV2(int S) {
+		int sum =0;
+		int n = 1;
+		while(sum<S) {
+			sum +=n;
+			n++;
+		}
+		return S==sum;
+	}
+	
 	private static boolean isSpecialNumber(int number) {
 		if(number == 1) {
 			return true;
 		}
-		
-		int sum = 0;
 		int count = 1;
+		int sum = 0;
 		while(true) {
-			if(count > number/2) {
+			if(sum >= number) {
 				break;
 			}
-			if(number%count == 0) {				
-				sum += count;
-			}
+			sum += count;
 			count++;
 		}
-		
 		return sum == number;
 	}
 	
