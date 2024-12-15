@@ -12,7 +12,8 @@ public class Ex01BuilderDemo {
 		Item i1 = b1.withId(1).withName("A").build();
 		System.out.println("i1 --> " + i1);
 		
-		Item i2 = b1.withId(2).withName("B")
+		Item i2 = b1.withId(2).withName("B").withAmount(3).build();
+		System.out.println("i2 --> " + i2);
 		
 	}
 	
