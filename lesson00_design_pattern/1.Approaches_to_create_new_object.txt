@@ -19,3 +19,6 @@ gọi cũng ko làm ảnh hưởng đến kết quả --> tạo 1 đối tượn
 + Class ví dụ utils có private constructor --> tạo 0 đối tượng
 
 Cách 3: Sử dụng builder design pattern
+--> Dùng builder khi có class có nhiều(convention >= 6,7) thuộc tính và
+	+ cần các hàm khởi tạo dạng overloading không được
+	+ 1 lúc cập nhật nhiều giá trị, gọi hàm setter trả về void bất tiện
