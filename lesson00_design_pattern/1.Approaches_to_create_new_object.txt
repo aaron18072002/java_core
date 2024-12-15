@@ -22,3 +22,6 @@ Cách 3: Sử dụng builder design pattern
 --> Dùng builder khi có class có nhiều(convention >= 6,7) thuộc tính và
 	+ cần các hàm khởi tạo dạng overloading không được
 	+ 1 lúc cập nhật nhiều giá trị, gọi hàm setter trả về void bất tiện
+	+ muốn đối tượng được tạo ra là immutable
+		: final ở STACK
+		: immutable ở HEAP
