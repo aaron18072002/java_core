@@ -17,3 +17,5 @@ gọi cũng ko làm ảnh hưởng đến kết quả --> tạo 1 đối tượn
 --> VD: ItemService --> ItemServiceImpl
 + Class thông thường --> tạo N đối tượng
 + Class ví dụ utils có private constructor --> tạo 0 đối tượng
+
+Cách 3: Sử dụng builder design pattern
