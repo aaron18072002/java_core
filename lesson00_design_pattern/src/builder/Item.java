@@ -34,11 +34,69 @@ public class Item {
 	private LocalDate startedDate;
 	private LocalDate expiredDate;
 	
+	private Item() {
+		
+	}
+	
+	private Item(Builder builder) {
+		this.id = builder.id;
+		this.name = builder.name;
+		this.salesPrice = builder.salesPrice;
+		this.buyPrice = builder.buyPrice;
+		this.tax = builder.tax;
+		this.amount = builder.amount;
+		this.startedDate = builder.startedDate;
+		this.expiredDate = builder.expiredDate;
+	}
+	
 	public static Builder builder() {
 		return new Builder();
 	}
 	
-	// Nested class
+	// chỉ có getters, ko có setters
+	// 	ko có setters(muốn immutable,ko thể set các giá trị các tt trong	 
+	//	ô nhớ HEAP)
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public Double getSalesPrice() {
+		return salesPrice;
+	}
+	
+	public Double getBuyPrice() {
+		return buyPrice;
+	}
+	
+	public Double getTax() {
+		return tax;
+	}
+	
+	public int getAmount() {
+		return amount;
+	}
+	
+	public LocalDate getStartedDate() {
+		return startedDate;
+	}
+	
+	public LocalDate getExpiredDate() {
+		return expiredDate;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", name=" + name + ", salesPrice=" + salesPrice + ", buyPrice=" + buyPrice + ", tax="
+				+ tax + ", amount=" + amount + ", startedDate=" + startedDate + ", expiredDate=" + expiredDate + "]";
+	}
+
+	// ================ Nested class ==================
 	public static class Builder	{
 		
 		private int id;
@@ -51,13 +109,50 @@ public class Item {
 		private LocalDate expiredDate;
 		
 		// chỉ có setters, ko có getter
-		// để mà gán trị sau khi tạo đối tượng builder
-		public void setId(int id) {
+		// để mà gán trị sau khi tạo đối tượng builder		
+
+		public Builder withId(int id) {
 			this.id = id;
+			return this;
 		}
-		
-		public void setName(String name) {
+
+		public Builder withName(String name) {
 			this.name = name;
+			return this;
+		}
+
+		public Builder withSalesPrice(Double salesPrice) {
+			this.salesPrice = salesPrice;
+			return this;
+		}
+
+		public Builder withBuyPrice(Double buyPrice) {
+			this.buyPrice = buyPrice;
+			return this;
+		}
+
+		public Builder withTax(Double tax) {
+			this.tax = tax;
+			return this;
+		}
+
+		public Builder withAmount(int amount) {
+			this.amount = amount;
+			return this;
+		}
+
+		public Builder withStartedDate(LocalDate startedDate) {
+			this.startedDate = startedDate;
+			return this;
+		}
+
+		public Builder withExpiredDate(LocalDate expiredDate) {
+			this.expiredDate = expiredDate;
+			return this;
+		}
+
+		public Item build() {
+			return new Item(this);
 		}
 		
 	}
