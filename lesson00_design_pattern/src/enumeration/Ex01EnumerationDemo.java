@@ -19,17 +19,17 @@ public class Ex01EnumerationDemo {
 		System.out.println("Vị trí: " + getPosition(pA, circle));
 	}
 	
-	public static String getPosition(Point pA, Circle circle) {
+	public static CirclePos getPosition(Point pA, Circle circle) {
 		Point pO = circle.p();
 		double r = circle.r();
 		double d = sqrt(pow(pA.y - pO.y,2) + pow(pA.x - pO.x,2));
 		if(d > r) {
-			return "Ngoài đường tròn";
+			return CirclePos.OUTSIDE;
 		}
 		if(d == r) {
-			return "Trên đường tròn";
+			return CirclePos.ONSIDE;
 		}
-		return "Trong đường tròn";
+		return CirclePos.INSIDE;
 	}
 	
 }
