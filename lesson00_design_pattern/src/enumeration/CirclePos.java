@@ -13,4 +13,8 @@ public enum CirclePos {
 		this.localizeMessage = localizeMessage;
 	}
 	
+	public String getLocalizeMessage() {
+		return localizeMessage;
+	}
+	
 }
