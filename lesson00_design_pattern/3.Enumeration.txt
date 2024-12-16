@@ -1,0 +1,5 @@
+Mục đích: lưu trữ tập hợp các giá trị là HẰNG SỐ trong
+một phạm vi nào đó --> ENUM
+
+Bài toán: Xác định vị trí của 1 điểm so với đường tròn
++ Trong, Trên, Ngoài
