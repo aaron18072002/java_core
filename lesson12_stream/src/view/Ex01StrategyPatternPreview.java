@@ -31,6 +31,20 @@ public class Ex01StrategyPatternPreview {
 			filter(inventory, a -> "red".equals(a.getColor()))
 		);
 		
+		// 3st : find all apples heavier than 50g
+		generate(
+			"3st : find all apples heavier than 50g", 
+			filter(inventory, a -> a.getWeight() > 50.0));
+		
+		// 4th: find all apples lighter than 200g
+		generate(
+			"4th: find all apples lighter than 200g", 
+			filter(inventory, a -> a.getWeight() < 200.0));
+		
+		// 5th: find all apples that are green and heavier than 40 g
+		generate(
+			"5th: find all apples that are green and heavier than 40 g", 
+			filter(inventory, a -> a.getWeight() >= 40.0 && "green".equals(a.getColor())));
 	}
 	
 	// Quan trọng phải biết bài toán có strategy như thế nào
