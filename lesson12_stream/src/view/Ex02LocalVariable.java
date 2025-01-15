@@ -30,7 +30,7 @@ public class Ex02LocalVariable {
 		Double sum = 0.0;
 		
 		// 2. anonymous class
-		inventory.forEach(new Consumer<Apple>() {
+		inventory.stream().forEach(new Consumer<Apple>() {
 			@Override
 			public void accept(Apple a) {
 				total = total + a.getWeight();
