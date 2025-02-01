@@ -2,6 +2,7 @@ package utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FileUtils {
 
@@ -9,6 +10,31 @@ public class FileUtils {
 		
 	}
 	
+	public static void deleteFile(File file) {
+		if(file.isFile()) {
+			file.delete();
+		}
+	}
+	
+	public static void deleteFolder(File folder) {
+		if(folder.isDirectory()) {
+			folder.delete();
+		}
+	}
+	
+	public static void deleteFolder(File folder, boolean removeSubFiles) {
+		if (folder.isDirectory()) {
+			if (removeSubFiles) {
+				File[] subFiles = folder.listFiles();
+				Arrays.stream(subFiles).forEach(subFile -> {
+					subFile.delete();
+					System.out.println("deleted file --> " + subFile.getPath());
+				});
+			}
+			folder.delete();
+		}
+	}
+
 	public static File createFile(String path) {
 		File file = new File("public/data.txt");
 		if(!file.exists()) {		
