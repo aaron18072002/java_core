@@ -1,10 +1,13 @@
 package bean;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Item {
+public class Item implements Serializable {
+	
+	private static final long serialVersionUID = -32423432423423L;
 	
 	private Integer id;
 	private String name;

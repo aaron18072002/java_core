@@ -1,14 +1,53 @@
 package utils;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.function.Function;
 
 public class FileUtils {
 
 	private FileUtils() {
 		
 	}
+	
+	public static void writeFile(File file, Iterable<? extends CharSequence> lines) {		
+		Path path = file.toPath();
+		
+		// Thao tác ghi file
+		try {
+			Files.write(path, lines, StandardOpenOption.APPEND);
+			Desktop.getDesktop().open(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static <T> void writeFile(File file, Collection<T> elements, 
+			Function<T, String> transformer) {		
+		Path path = file.toPath();
+		
+		List<String> lines = elements.stream()
+				.map(e -> transformer.apply(e)).toList();
+		
+		// Thao tác ghi file
+		try {
+			Files.write(path, lines, StandardOpenOption.APPEND);
+			Desktop.getDesktop().open(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	// =====================================
 	
 	public static void deleteFile(File file) {
 		if(file.isFile()) {
