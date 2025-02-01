@@ -2,6 +2,7 @@ package bean;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Item {
 	
@@ -54,6 +55,11 @@ public class Item {
 		this.expiredDate = expiredDate;
 	}
 	
+	public static String toLine(Item item) {
+		return item.getId() + ", " + item.getName() + ", "
+				+ item.getSalesPrice() + ", " + item.getExpiredDate();
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if(this == obj) {
@@ -64,6 +70,11 @@ public class Item {
 		}
 		Item that = (Item)obj;
 		return this.getId() == that.getId();
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(this.getId());
 	}
 
 	@Override

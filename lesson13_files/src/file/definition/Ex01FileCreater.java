@@ -24,7 +24,7 @@ public class Ex01FileCreater {
 		
 		System.out.println("=== START ===");
 		
-		File file = new File("public/data.txt");
+		File file = new File("testcase/test01.txt");
 		if(!file.exists()) {		
 			File parentFile = file.getParentFile();
 			System.out.println("parent path --> " + parentFile.getPath());
