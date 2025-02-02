@@ -5,6 +5,7 @@ import static utils.ThreadUtils.startThread;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
@@ -17,28 +18,34 @@ public class Ex03TPoolCallableFutureTask {
 	public static void main(String[] args) {
 
 		// Giả lập có N Tasks
-		List<Task> tasks = createTasksToBeExecuted(10);
+		List<FutureTask<String>> tasks = createTasksToBeExecuted(10);
 
 		// Giả lập Thread Pool với pool size = x (<= number of logical processors)
 		int processors = Runtime.getRuntime().availableProcessors();
 		System.out.println("processors ==> " + processors);
 		ExecutorService service = Executors.newFixedThreadPool(4);
 
-		// ExecutorService#execute(Runnable) --> void
-		// ExecutorService#execute(Callable<T>) --> Future<T>
-		// ExecutorService#execute(Runnable) --> Future<?>
-		for (Task task : tasks) {
-			service.submit(new FutureTask<>(task));
+		// ExecutorService#execute(Runnable) --> return void
+		// ExecutorService#execute(Callable<T>) --> return Future<T> --> submit xong trả về Future<?>
+		// ExecutorService#execute(Runnable) --> return Future<?> --> submit xong trả kết quả vào trong Future<?>
+		for (FutureTask<String> task : tasks) {
+			service.submit(task);
+			
+			try {
+				System.out.println("task data --> " + task.get());
+			} catch (InterruptedException | ExecutionException e) {
+				e.printStackTrace();
+			} 
 		}
 
 		service.shutdown();
 
 	}
 	
-	private static List<Task> createTasksToBeExecuted(int amount) {
+	private static List<FutureTask<String>> createTasksToBeExecuted(int amount) {
 		return IntStream.rangeClosed(1, amount) // IntStream
 			.boxed() // Stream<Integer>
-			.map(i -> new Task()) // Steam<Task>
+			.map(i -> new FutureTask<String>(new Task())) // Steam<FutureTask<String>>
 			.toList();
 	}
 
