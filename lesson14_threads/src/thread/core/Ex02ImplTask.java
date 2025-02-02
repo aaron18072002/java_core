@@ -11,6 +11,10 @@ public class Ex02ImplTask {
 		Thread t1 = new Thread(new Task(), "thread-1");
 		t1.start();
 		
+		// Thread#start --> Thread#run --> Runnable#run by seperated CPU core
+		
+		doTask(3);
+		
 		endThread();
 		
 	}
