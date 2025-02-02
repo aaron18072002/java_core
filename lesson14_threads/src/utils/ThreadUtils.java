@@ -21,6 +21,11 @@ public class ThreadUtils {
 				+ "' is started ....");
 	}
 	
+	public static void startThread(Object info) {
+		System.out.println("\n^^^ Thread '" + getCurrentThreadName()
+				+ "' is started ...." + info.toString());
+	}
+	
 	public static void endThread() {
 		System.out.println("\n### Thread '" + getCurrentThreadName()
 				+ "' is finished ....");

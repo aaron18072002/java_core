@@ -40,6 +40,9 @@ public class Ex04SimpleThreadFeature {
 			join(t3);
 		});
 		
+		// Vấn đề 1: Khi số lượng tasks cần thực thi đồng thời lớn
+		// Vấn đề 2: Mỗi Task = Runnable, làm sao trả về kết quả của Task sau khi đã thực thi
+		
 	}
 	
 	private static void fn1() {
